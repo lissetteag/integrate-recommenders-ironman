@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="integrate.recommenders.ironman.wizard.project.category"
+            name="IronMan">
+      </category>
+      <wizard
+            category="integrate.recommenders.ironman.wizard.project.category"
+            class="integrate.recommenders.ironman.wizard.pages.IronManWizard"
+            icon="icons/ironman-icon.png"
+            id="integrate.recommenders.ironman.wizard.project"
+            name="New IronMan Project"
+            project="true">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="integrate.recommenders.ironman.wizard.preferences.IronManPreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="integrate.recommenders.ironman.wizard.preferences.IronManPreferencePage"
+            id="integrate.recommenders.ironman.wizard.preferences.IronManPreferencePage"
+            name="IronMan Preferences">
+      </page>
+   </extension>
+
+</plugin>
